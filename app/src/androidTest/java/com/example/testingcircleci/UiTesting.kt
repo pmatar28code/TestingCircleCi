@@ -21,7 +21,7 @@ class UiTesting {
     @get:Rule
     val activityRule = ActivityTestRule(MainActivity::class.java)
     @Test
-    fun when_fun_set_text_runs_and_assigned_to_TextiView_should_display_the_Same_text(){
+    fun `when_fun_set_text_runs_and_assigned_to_TextView_should_display_the_Same_text`(){
         val testTextView = activityRule.activity.findViewById<TextView>(R.id.test_text)
         runBlocking {
             delay(1000)
